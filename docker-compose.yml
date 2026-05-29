@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # 1. บริการฝั่งหน้าบ้าน (Vue 3 หน้ากากระบบห้องสมุดอัจฉริยะ)
+  frontend:
+    build: ./example-project
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+  # 2. บริการฝั่งหลังบ้าน (Node.js API)
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=host.docker.internal  # 💡 ใช้ค่านี้เพื่อให้วิ่งทะลุกำแพง Docker ออกมาหาเครื่อง Host
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASS=1234
+      - DB_NAME=Smart_Library_System
+    # สั่งเปิดสะพานเน็ตเวิร์กเชื่อมต่อระหว่าง Container กับเครื่อง Host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
