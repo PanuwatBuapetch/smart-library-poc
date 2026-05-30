@@ -2,7 +2,7 @@
   <div class="container-fluid py-4 px-4">
     <header class="text-center mb-5 header-section">
       <h1 class="display-5 fw-bold text-gradient mb-3">📚 Smart Library System</h1>
-      <p class="text-muted fs-5">ระบบจัดการทรัพยากรห้องสมุดอัจฉริยะ</p>
+      <p class="text-muted fs-5">ยืมหนังสือได้ทันที</p>
       <div class="header-line"></div>
     </header>
 

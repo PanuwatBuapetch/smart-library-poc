@@ -1,13 +1,21 @@
-CREATE TABLE books (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255),
-    status VARCHAR(50) DEFAULT 'Available'
-);
+-- CREATE TABLE books (
+--     id SERIAL PRIMARY KEY,
+--     title VARCHAR(255) NOT NULL,
+--     author VARCHAR(255),
+--     status VARCHAR(50) DEFAULT 'Available'
+-- );
 
-CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    role VARCHAR(50) DEFAULT 'Member'
-);
+-- CREATE TABLE IF NOT EXISTS users (
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(255) NOT NULL,
+--     email VARCHAR(255) UNIQUE NOT NULL,
+--     role VARCHAR(50) DEFAULT 'Member'
+-- );
+
+-- CREATE TABLE IF NOT EXISTS borrow (
+--     id SERIAL PRIMARY KEY,
+--     book_id INT NOT NULL REFERENCES books(id),
+--     user_id INT NOT NULL REFERENCES users(id),
+--     borrow_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+--     return_date TIMESTAMP
+-- );

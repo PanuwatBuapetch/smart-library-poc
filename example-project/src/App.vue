@@ -13,6 +13,9 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/users" class="nav-item" active-class="active-link">
             👥 ระบบสมาชิก
           </RouterLink>
+          <RouterLink to="/borrows" class="nav-item" active-class="active-link">
+            🔄 การยืม-คืน
+          </RouterLink>
         </div>
       </div>
     </nav>
